@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Felipe Fragoso — CV</title>
+<meta name="description" content="Felipe Fragoso — Full-Stack Developer (Next.js, .NET, PHP, Python). CV in italiano e inglese.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f7f9; --paper: #ffffff; --ink: #16181d; --muted: #5b6270;
+    --line: #e3e6eb; --accent: #0b6e4f; --accent-soft: #e6f3ee; --chip: #f0f2f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1115; --paper: #171a20; --ink: #e8eaee; --muted: #9aa2b1;
+      --line: #2a2f38; --accent: #4fc79a; --accent-soft: #16302a; --chip: #222731;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.55 Inter, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .bar { max-width: 860px; margin: 0 auto; padding: 16px; display: flex; gap: 8px; justify-content: flex-end; }
+  .bar button { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--paper); color: var(--ink); cursor: pointer; }
+  .bar button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  main { max-width: 860px; margin: 0 auto 48px; background: var(--paper);
+    border: 1px solid var(--line); border-radius: 14px; padding: 40px 44px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0; letter-spacing: -0.02em; }
+  .role { color: var(--accent); font-weight: 600; margin: 4px 0 12px; }
+  .contact { color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+  .contact a { color: inherit; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted);
+    border-bottom: 1px solid var(--line); padding-bottom: 6px; margin: 32px 0 14px; }
+  .job { margin-bottom: 18px; }
+  .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; }
+  .job-title { font-weight: 600; }
+  .job-when { color: var(--muted); font-size: 14px; }
+  ul { margin: 6px 0 0; padding-left: 20px; }
+  li { margin: 3px 0; }
+  a { color: var(--accent); }
+  .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+  .card { border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+  .card h3 { font-size: 15px; margin: 0 0 4px; }
+  .card p { margin: 0 0 8px; color: var(--muted); font-size: 14px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .tag { background: var(--chip); border-radius: 6px; font-size: 12px; padding: 2px 7px; }
+  .skills { display: grid; grid-template-columns: 140px 1fr; gap: 6px 16px; }
+  .skills dt { font-weight: 600; } .skills dd { margin: 0; }
+  .gdpr { margin-top: 28px; color: var(--muted); font-size: 12px; font-style: italic; }
+  [data-lang="en"] .it, [data-lang="it"] .en { display: none; }
+  @media (max-width: 600px) {
+    main { padding: 24px 16px; border-radius: 0; border-left: 0; border-right: 0; }
+    .skills { grid-template-columns: 1fr; } .skills dd { margin-bottom: 8px; }
+  }
+  @media print {
+    body { background: #fff; font-size: 12.5px; } .bar { display: none; }
+    main { border: 0; padding: 0; margin: 0; max-width: none; }
+    .card { break-inside: avoid; } a { color: inherit; }
+  }
+</style>
+</head>
+<body data-lang="it">
+<div class="bar">
+  <button data-set="it" aria-pressed="true">Italiano</button>
+  <button data-set="en" aria-pressed="false">English</button>
+  <button id="print"><span class="it">Scarica PDF</span><span class="en">Download PDF</span></button>
+</div>
+<main>
+  <header>
+    <h1>Felipe Fragoso</h1>
+    <div class="role">
+      <span class="it">Sviluppatore Full-Stack · Sistemi gestionali (ERP/POS) e migrazione dati</span>
+      <span class="en">Full-Stack Developer · ERP/POS Systems &amp; Data Migration</span>
+    </div>
+    <div class="contact">
+      <span class="it">Jaú (SP), Brasile · Disponibile a trasferirsi in Italia e nell'UE · Cittadinanza italiana in corso di riconoscimento</span>
+      <span class="en">Jaú (SP), Brazil · Open to relocation (Italy, EU and worldwide) · Italian citizenship in progress</span>
+    </div>
+    <div class="contact" style="margin-top:4px">
+      <a href="mailto:felipefragoso2025@gmail.com">felipefragoso2025@gmail.com</a>
+      <a href="https://github.com/felipedev2025">github.com/felipedev2025</a>
+      <a href="https://balcao360.online">balcao360.online</a>
+    </div>
+  </header>
+
+  <h2><span class="it">Profilo</span><span class="en">Summary</span></h2>
+  <p class="it">Sviluppatore full-stack e imprenditore digitale con esperienza nella creazione di piattaforme SaaS in cloud e nell'implementazione di sistemi gestionali per il commercio al dettaglio. Fondatore di Balcão360, piattaforma web con backend .NET e frontend Next.js. Esperienza concreta in migrazioni di database con dati finanziari reali (Firebird → MySQL), integrazione di pagamenti online e modernizzazione di sistemi PHP legacy. Uso quotidiano di strumenti di intelligenza artificiale (Claude Code, ChatGPT) per accelerare sviluppo, analisi dati e produzione di contenuti. Orientato al cliente, preciso con numeri e dati, abituato a lavorare in autonomia.</p>
+  <p class="en">Full-stack developer and digital entrepreneur who builds cloud SaaS platforms and implements retail management systems. Founder of Balcão360, a web platform built with .NET and Next.js. Hands-on experience migrating live financial data between databases (Firebird → MySQL), integrating online payments and modernizing legacy PHP systems. Daily user of AI tools (Claude Code, ChatGPT) for development, data analysis and content creation. Client-focused, precise with data, and used to working independently.</p>
+
+  <h2><span class="it">Esperienza professionale</span><span class="en">Experience</span></h2>
+  <div class="job">
+    <div class="job-head">
+      <span class="job-title"><span class="it">Analista di Sistemi Web</span><span class="en">Web Systems Analyst</span> — TJ Automação</span>
+      <span class="job-when"><span class="it">giugno 2025 – oggi</span><span class="en">June 2025 – present</span></span>
+    </div>
+    <ul class="it">
+      <li>Sviluppo del <a href="https://tj-automacao-next.vercel.app">sito istituzionale dell'azienda</a> (Next.js, TypeScript, Tailwind CSS).</li>
+      <li>Implementazione e supporto di software gestionali per il commercio (STi3, Consumer) presso negozi e attività di ristorazione.</li>
+      <li>Migrazione completa di una mensa scolastica da Consumer (Firebird) a STi3 (MySQL 5.7): vendite, crediti clienti, casse e anagrafiche, senza duplicati e con valori reali verificati.</li>
+      <li>Script Python per estrazione, validazione e confronto dei dati; risoluzione di errori nei report del gestionale causati dai dati migrati.</li>
+    </ul>
+    <ul class="en">
+      <li>Built the <a href="https://tj-automacao-next.vercel.app">company website</a> (Next.js, TypeScript, Tailwind CSS).</li>
+      <li>Implemented and supported retail management software (STi3, Consumer) for shops and food-service businesses.</li>
+      <li>Migrated a school cafeteria from Consumer (Firebird) to STi3 (MySQL 5.7): sales, customer credit, cash registers and customer records, with no duplicates and verified real values.</li>
+      <li>Wrote Python scripts to extract, validate and diff the data; fixed report errors caused by migrated records.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div class="job-head">
+      <span class="job-title"><span class="it">Fondatore e Sviluppatore Full-Stack</span><span class="en">Founder &amp; Full-Stack Developer</span> — Balcão360</span>
+      <span class="job-when"><span class="it">Brasile (da remoto)</span><span class="en">Brazil (remote)</span></span>
+    </div>
+    <ul class="it">
+      <li>Progettazione e sviluppo di una piattaforma SaaS in cloud (<a href="https://balcao360.online">balcao360.online</a>) con backend .NET e frontend Next.js.</li>
+      <li>Pianificazione dell'architettura in fasi: audit del codice, centralizzazione delle regole di disponibilità, test automatici (xUnit), migrazione dei dati dal sistema precedente.</li>
+      <li>Gestione del codice su GitHub con branch e pull request; sviluppo assistito da AI (Claude Code).</li>
+      <li>Marketing digitale del prodotto: video promozionali creati con strumenti di AI e pubblicazione su Instagram.</li>
+    </ul>
+    <ul class="en">
+      <li>Designed and built a cloud SaaS platform (<a href="https://balcao360.online">balcao360.online</a>) with a .NET backend and Next.js frontend.</li>
+      <li>Planned the architecture in phases: code audit, centralized availability rules, automated tests (xUnit) and legacy data migration.</li>
+      <li>Managed code on GitHub with branches and pull requests; AI-assisted development with Claude Code.</li>
+      <li>Ran product marketing: AI-made promo videos published on Instagram.</li>
+    </ul>
+  </div>
+  <div class="job">
+    <div class="job-head">
+      <span class="job-title"><span class="it">Sviluppatore Web</span><span class="en">Web Developer</span> — IPA Prime</span>
+      <span class="job-when"><a href="https://ipaprime.com.br">ipaprime.com.br</a></span>
+    </div>
+    <ul class="it">
+      <li>Sviluppo e manutenzione di un sistema web PHP/MySQL per prenotazioni, tornei, lezioni con istruttori e abbonamenti mensili.</li>
+      <li>Integrazione dei pagamenti online tramite gateway Asaas e job cron per la scadenza automatica delle prenotazioni non pagate.</li>
+      <li>Analisi di sicurezza e affidabilità del codice legacy (conflitti di orario, validazione dei prezzi lato server) come base per la migrazione al nuovo sistema.</li>
+    </ul>
+    <ul class="en">
+      <li>Built and maintained a PHP/MySQL web system for bookings, tournaments, instructor classes and monthly rentals.</li>
+      <li>Integrated online payments via the Asaas gateway, with cron jobs that expire unpaid bookings automatically.</li>
+      <li>Audited the legacy code for reliability and security (booking conflicts, server-side price validation) ahead of the migration to the new platform.</li>
+    </ul>
+  </div>
+
+  <h2><span class="it">Progetti principali</span><span class="en">Key projects</span></h2>
+  <div class="projects">
+    <div class="card">
+      <h3><a href="https://tj-automacao-next.vercel.app">TJ Automação</a></h3>
+      <p class="it">Sito istituzionale dell'azienda in cui lavoro (automazione commerciale, 500+ clienti).</p>
+      <p class="en">Corporate website for my current employer (retail automation, 500+ clients).</p>
+      <div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Tailwind</span><span class="tag">Vercel</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://site-tg-sports.vercel.app">TG Sports — E-commerce</a></h3>
+      <p class="it">Negozio online completo: carrello, checkout, PIX e carta (Asaas), webhook idempotente, pannello admin con magazzino, ordini, coupon e audit.</p>
+      <p class="en">Full online store: cart, checkout, PIX and card payments (Asaas), idempotent webhook, admin panel with stock, orders, coupons and audit log.</p>
+      <div class="tags"><span class="tag">Next.js 16</span><span class="tag">PostgreSQL</span><span class="tag">Prisma</span><span class="tag">Vitest</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://balcao360.online">Balcão360</a></h3>
+      <p class="it">Piattaforma SaaS in cloud.</p>
+      <p class="en">Cloud SaaS platform.</p>
+      <div class="tags"><span class="tag">.NET</span><span class="tag">Next.js</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/felipedev2025/clinica">Clinica</a></h3>
+      <p class="it">Gestione appuntamenti per una clinica medica, con AJAX e job programmati.</p>
+      <p class="en">Appointment scheduling for a medical clinic, with AJAX and scheduled jobs.</p>
+      <div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/felipedev2025/PROJETO-CHAMADO">Help desk</a></h3>
+      <p class="it">Registrazione e monitoraggio di ticket di assistenza tecnica.</p>
+      <p class="en">Logs and tracks technical support tickets.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">MySQL</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/felipedev2025/chat-whatsapp-felipe">WhatsApp chatbot</a></h3>
+      <p class="it">Assistenza automatica con menù (supporto, finanza, commerciale) via webhook.</p>
+      <p class="en">Automated customer service menu (support, billing, sales) via webhook.</p>
+      <div class="tags"><span class="tag">Node.js</span><span class="tag">WhatsApp Cloud API</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/felipedev2025/secureDB">SecureDB</a></h3>
+      <p class="it">Audit degli accessi: log dei login, blocco IP dopo tentativi falliti, avvisi email.</p>
+      <p class="en">Access audit: login logs, IP blocking after failed attempts, email alerts.</p>
+      <div class="tags"><span class="tag">Python</span><span class="tag">SQLAlchemy</span><span class="tag">bcrypt</span></div>
+    </div>
+    <div class="card">
+      <h3><a href="https://github.com/felipedev2025/scripts-suporte-windows">Windows support scripts</a></h3>
+      <p class="it">20 script per risolvere problemi di rete e di sistema.</p>
+      <p class="en">20 scripts to fix common network and system issues.</p>
+      <div class="tags"><span class="tag">Batch</span><span class="tag">VBScript</span></div>
+    </div>
+  </div>
+
+  <h2><span class="it">Competenze tecniche</span><span class="en">Skills</span></h2>
+  <dl class="skills">
+    <dt>Backend</dt><dd>.NET (C#), Node.js, PHP, Python (Flask)</dd>
+    <dt>Frontend</dt><dd>Next.js, React, TypeScript, Tailwind CSS, HTML/CSS</dd>
+    <dt>Database</dt><dd>MySQL, PostgreSQL (Prisma), Firebird, SQL — <span class="it">migrazione e validazione dati</span><span class="en">data migration and validation</span></dd>
+    <dt>Cloud &amp; DevOps</dt><dd>Git, GitHub, Vercel, <span class="it">hosting web</span><span class="en">web hosting</span>, cron jobs</dd>
+    <dt><span class="it">Pagamenti</span><span class="en">Payments</span></dt><dd>Asaas, PIX</dd>
+    <dt>ERP / POS</dt><dd>STi3, Consumer</dd>
+    <dt><span class="it">AI e contenuti</span><span class="en">AI &amp; content</span></dt><dd>Claude Code, ChatGPT, <span class="it">video editing con AI</span><span class="en">AI video editing</span>, Instagram</dd>
+  </dl>
+
+  <h2><span class="it">Lingue</span><span class="en">Languages</span></h2>
+  <p class="it">Portoghese (madrelingua) · Italiano (intermedio, B1–B2) · Inglese (intermedio, B1–B2)</p>
+  <p class="en">Portuguese (native) · Italian (intermediate, B1–B2) · English (intermediate, B1–B2)</p>
+
+  <h2><span class="it">Istruzione</span><span class="en">Education</span></h2>
+  <p class="it"><strong>Laurea (titolo universitario)</strong> — Brasile</p>
+  <p class="en"><strong>Bachelor's degree</strong> — Brazil</p>
+
+  <p class="gdpr it">Autorizzo il trattamento dei miei dati personali ai sensi del D.Lgs. 196/2003 e del Regolamento UE 2016/679 (GDPR).</p>
+</main>
+<script>
+  const setLang = (l) => {
+    document.body.dataset.lang = l;
+    document.documentElement.lang = l;
+    document.querySelectorAll('[data-set]').forEach(b => b.setAttribute('aria-pressed', b.dataset.set === l));
+    try { localStorage.setItem('cv-lang', l); } catch (e) {}
+  };
+  document.querySelectorAll('[data-set]').forEach(b => b.onclick = () => setLang(b.dataset.set));
+  document.getElementById('print').onclick = () => window.print();
+  let saved = null;
+  try { saved = localStorage.getItem('cv-lang'); } catch (e) {}
+  const q = new URLSearchParams(location.search).get('lang');
+  setLang(q === 'en' || q === 'it' ? q : (saved || 'it'));
+</script>
+</body>
+</html>
